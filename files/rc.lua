@@ -151,7 +151,7 @@ root.buttons(awful.util.table.join(
 local globalkeys = awful.util.table.join(
     awful.key({ }                  , "XF86PowerOff", focus_home_screen),
     awful.key({ modkey,           }, "Tab", focus_next_client),
-    awful.key({ "Control",        }, "Tab", focus_next_client),
+    awful.key({ "Control",        }, "Tab", focus_next_client)--,
     --awful.key({ modkey,           }, "Return", function () awful.util.spawn("dm$
 )
 
@@ -176,6 +176,7 @@ local clientbuttons = awful.util.table.join(
     awful.button({ modkey }, 1, awful.mouse.client.move),
     -- right click when holding mod
     awful.button({ "Control" }, 1, function (c) awful.util.spawn("xdotool click --clearmodifiers 3") end)
+)
 
 -- Set global keys
 root.keys(globalkeys)
